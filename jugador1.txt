@@ -1,0 +1,6 @@
+Nombre: jose
+Nº Partidas: 100
+Horas: 2
+Kills: 92
+Deaths: 12
+K/D: 7.666666666666667
