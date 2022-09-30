@@ -3,7 +3,7 @@ package Ejercicios
 fun main() {
     //BUCLE REPEAT
 
-    crearRascacielos(20,15,2)
+    crearRascacielos(20,8,3)
 
 
 }
@@ -17,15 +17,19 @@ fun crearRascacielos(numeroPisos: Int, numeroVentanas:Int, numeroTorres:Int) {
             print(" ")
         }
     }
-        repeat(numeroPisos) {
-            print("\n")
+
+
+    repeat(numeroPisos) {
+        print("\n")
+        repeat(numeroTorres) {
             print("|")
             repeat(numeroVentanas) {
                 print("_▋_")
-
             }
             print("|")
+            repeat(numeroVentanas * 3 + 2) {
+                print(" ")
+            }
         }
-
-
     }
+}
