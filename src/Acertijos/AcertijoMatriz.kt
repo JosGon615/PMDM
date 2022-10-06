@@ -1,60 +1,40 @@
 package Acertijos
 
-fun main (){
-    var matriz:String = "1 2 3 4 5 6 7 8 9 10 11 12"
+fun main () {
+    var matriz: String =
+            "1 2 3\n " + //arraylist (1 2 3)
+            "4 5 6\n " + //arraylist
+            "7 8 9\n"
 
-    filas(matriz)
-    columnas(matriz)
-    var tam = matriz.length
-    print(tam)
-}
+    var contC = 0
+    var contF = 0
+    val arrayG = ArrayList<ArrayList<Char>>()
 
-fun filas(matriz:String){
 
-    var tam = matriz.length
-    var mArray = matriz.toCharArray()
-    print("Filas: \n")
-    var i = 0
-    repeat(tam/3){
-        print(" " + matriz[i])
-        i += 2
+    matriz.forEach {
+        if (it == '\n')
+            arrayG.add(ArrayList())
     }
-    print("\n")
-    repeat(tam/3){
-        print(" " + matriz[i])
-        i += 2
 
-    }
-    print("\n")
-    repeat(tam/3){
-        print(" " + matriz[i])
-        i += 2
-    }
-    print("\n")
-    print("\n")
-}
-
-fun columnas(matriz:String){
-    var mArray = matriz.toCharArray()
-    var tam = matriz.length
-    print("Columnas: \n")
-
-    var i = 0
-    repeat(tam/3){
-        print(" " + matriz[i])
-        i += 6
-        repeat(tam/3){
-            print(" " + matriz[i])
-            i += 6
+    matriz.forEach {
+        if (!it.isWhitespace()){
+            arrayG[contF].add(it)
+            contC++
         }
-        i = 4
-        print("\n")
-        repeat(tam/3){
-            print(" " + matriz[i])
-            i += 6
+
+        if (it == '\n'){
+            contC = 0
+            contF++
         }
     }
 
-    print("\n")
-    print("\n")
+   contF = 0
+   arrayG.forEach(){
+       print(arrayG[contF])
+       contF++
+   }
+
+
+
+
 }
