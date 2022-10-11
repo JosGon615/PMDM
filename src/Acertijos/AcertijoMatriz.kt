@@ -6,33 +6,34 @@ fun main () {
             "4 5 6\n " + //arraylist
             "7 8 9\n"
 
-    var contC = 0
     var contF = 0
-    val arrayG = ArrayList<ArrayList<Char>>()
+    var contC = 1
+    var cont = 0
 
 
-    matriz.forEach {
-        if (it == '\n')
-            arrayG.add(ArrayList())
-    }
+    val arrayG = arrayOf<String>("1","2","3","\n","4","5","6","\n","7","8","9")
 
-    matriz.forEach {
-        if (!it.isWhitespace()){
-            arrayG[contF].add(it)
-            contC++
+    arrayG.forEach {
+        print("\t")
+        if (it != "\n" || cont<=contF){
+            print(it)
+            print(" ")
+            cont++
         }
 
-        if (it == '\n'){
-            contC = 0
+
+        if(it == "\n"){
             contF++
+            print(contF)
         }
+
+
+
+
     }
 
-   contF = 0
-   arrayG.forEach(){
-       print(arrayG[contF])
-       contF++
-   }
+
+
 
 
 
