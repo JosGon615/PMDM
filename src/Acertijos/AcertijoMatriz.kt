@@ -3,9 +3,9 @@ package Acertijos
 fun main () {
     var contF = 0
     var contC = 0
-    var i = 0
+    var i = 1
 
-    val arrayG = arrayOf<String>("1","2","3","\n","4","5","6","\n","7","8","9","\n","7","8","9","\n")
+    val arrayG = arrayOf<String>("1","2","3","8","8","\n","4","5","6","8","8","\n","7","8","9","8","8","\n","7","8","9","8","8","\n","4","5","6","8","8","\n","7","8","9","8","8","\n")
 
 
     arrayG.forEach {
@@ -17,17 +17,12 @@ fun main () {
         }
     }
     contC= contC/contF
-    println("contador F")
-    println(contF)
-    println("contador C")
-    println(contC)
-
 
     //print contador columnas
     print("   ")
-    repeat(contF){
-        print(contC)
-        contC++
+    repeat(contC){
+        print(i)
+        i++
         repeat(2){
             print(" ")
         }
@@ -36,7 +31,7 @@ fun main () {
     //print guiones
     println()
     print(" |")
-    repeat(contF*3){
+    repeat(contC*3){
         print("-")
     }
 
@@ -44,16 +39,16 @@ fun main () {
     println()
 
     i=1
-    print(contC)
+    print(i)
     print("| ")
 
     arrayG.forEach {
         //print contador filas
-       if(it != "\n"){
+       if(it != "\n" ){
            print(it)
            print("  ")
        }
-       else{
+       else if(i<contF){
            i++
            println()
            print(i)
