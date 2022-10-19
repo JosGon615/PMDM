@@ -1,29 +1,31 @@
 package Acertijos
 
 fun main(){
-    val arrayC = charArrayOf('a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z')
-    var ROT = 15
-    var i = 0
-    var cont = 0
-    var word = "h "
+    val arrayC = "abcdefghijklmnopqrstuvwxyz".toCharArray()
+    val long = arrayC.size
+    var word = "h"
     var pass = ""
+    var rot = 13
+    var i = 0
+    var sum = 0
 
+    //si i se pasa de 26 haremos un MOD para que vaya a la posicion adecuada
+    //por ejemplo si tenemos "z" se ira al 27, por lo tanto 27%26 = 1 (sse iria al inicio del array)
 
     word.forEach {
         do{
-            if (it.lowercaseChar() == arrayC[i]){
-                cont = i + ROT
-                println(cont)
-                pass += arrayC[cont]
+            if(!it.lowercaseChar().isLetter()){
+                pass += it.lowercaseChar()
             }
-            i++
-        }while (i < word.length)
+            else if(it.lowercaseChar() == arrayC[i]){
+                if(sum>){}
+                sum = i + rot
+                word += arrayC[sum]
+            }
+        }while(i<=long)
     }
 
-
-
-    println(word)
-    print(pass)
+    println(i)
 
 }
 
