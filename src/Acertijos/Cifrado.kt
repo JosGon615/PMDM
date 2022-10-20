@@ -1,9 +1,9 @@
 package Acertijos
 
 fun main(){
-    val arrayC = "abcdefghijklmnopqrstuvwxyz".toCharArray()
+    val arrayC = "abcdefghijklmnñopqrstuvwxyz".toCharArray()
     val long = arrayC.size
-    var word = "h"
+    var word = "abcdefghijklmnñopqrstuvwxyz"
     var pass = ""
     var rot = 13
     var i = 0
@@ -13,19 +13,23 @@ fun main(){
     //por ejemplo si tenemos "z" se ira al 27, por lo tanto 27%26 = 1 (sse iria al inicio del array)
 
     word.forEach {
+        i=0
         do{
             if(!it.lowercaseChar().isLetter()){
                 pass += it.lowercaseChar()
             }
             else if(it.lowercaseChar() == arrayC[i]){
-                if(sum>){}
                 sum = i + rot
-                word += arrayC[sum]
+                if(sum>long){
+                    sum %= long
+                }
+                pass += arrayC[sum]
             }
-        }while(i<=long)
+            i++
+        }while(i<long)
     }
 
-    println(i)
+    println(pass)
 
 }
 
