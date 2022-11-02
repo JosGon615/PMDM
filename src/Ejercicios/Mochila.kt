@@ -2,7 +2,7 @@ package Ejercicios
 
 fun main(){
 
-    Personaje("Jose",10,"Ladrón")
+    Persona("Jose",10,"Ladrón")
     val articulos = arrayListOf<Articulo>(Articulo(5,10), Articulo(4,40), Articulo(6,30), Articulo(4,50))
     val mochila = arrayListOf<Articulo>()
 
@@ -13,7 +13,7 @@ fun main(){
 
 }
 
-class Personaje {
+class Persona {
     var nombre : String
     var mochila : Int
     var perfil : String
