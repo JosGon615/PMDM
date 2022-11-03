@@ -56,8 +56,4 @@ fun main () {
         }
     }
 
-    println()
-    println()
-    println("SUUUUUU!!!!!")
-
 }
