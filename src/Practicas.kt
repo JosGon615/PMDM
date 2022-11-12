@@ -1,4 +1,4 @@
-fun main() {
+/*fun main() {
 
     /*val num: Long = 13
     print("El número $num es mi....")
@@ -66,7 +66,7 @@ fun parImpar (num: Int) {
 //NULOS
 fun funcion1 (n1: Int?, n2: Int?, n3: Int?, n4: Int?): Int?{
 
-   return if(n1==null || n2==null || n3==null || n4==null)
+    return if(n1==null || n2==null || n3==null || n4==null)
         null
     else
         n1 + n2 + n3 + n4
@@ -91,6 +91,6 @@ fun funcion3(num1: Int?, num2: Int?, num3: Int?, num4: Int?) : Int? {
         suma
     }
 }
-
+*/
 
 
