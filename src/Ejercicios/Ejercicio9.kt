@@ -1,6 +1,5 @@
 package Ejercicios
 
-import Dado
 
 fun main (){
     var weight = 0
